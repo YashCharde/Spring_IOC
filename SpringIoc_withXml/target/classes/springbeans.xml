@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!-- Use property-based injection only -->
+	<bean id="std" class="com.entity.Student">
+		<property name="id" value="1" />
+		<property name="name" value="Harsh" />
+		<property name="age" value="22" />
+		<property name="city" value="Satara" />
+	</bean>
+
+	<!-- Use constructor-based injection only  -->
+	<bean id="std" class="com.entity.Student">
+		<constructor-arg index="0" value="1" />
+		<constructor-arg index="1" value="Harsh" />
+		<constructor-arg index="2" value="22" />
+		<constructor-arg index="3" value="Satara" />
+	</bean>
+
+	<!-- You need to decide between constructor-based or property-based injection. 
+		If you're using constructor injection, remove the <property> tags. If you're 
+		using property injection, remove the <constructor-arg> tags -->
+</beans>
